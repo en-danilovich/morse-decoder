@@ -56,7 +56,7 @@ function convertToMorseCode(encodedLetter) {
     let letterMorseCode = '';
     encodedLetter = parseInt(encodedLetter).toString();
     for (let i = 0; i < encodedLetter.length; i += 2) {
-        letterMorseCode += parseInt(encodedLetter.slice(i, i + 2)) == 10 ? '.' : '-';
+        letterMorseCode += encodedLetter.slice(i, i + 2) == '10' ? '.' : '-';
     }
 
     return letterMorseCode;
